@@ -1,0 +1,25 @@
+﻿@model SnakeEyesGame.Models.SnakeEyes;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <title>Snake Eyes</title>
+</head>
+<body>
+    <h1>Snake Eyes</h1>
+    <p>Keep going but don't get 2 one's</p>
+    <p>
+        <span class="snakeEye">@Model.Eye1</span>
+        <span class="snakeEye">@Model.Eye2</span>
+    </p>
+    <p>
+        Total : @Model.Total
+    </p>
+</body>
+</html>
