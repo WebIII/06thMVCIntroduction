@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SnakeEyesGame.Models
+﻿namespace SnakeEyesGame.Models
 {
 
     public class SnakeEyes
@@ -34,7 +32,12 @@ namespace SnakeEyesGame.Models
         /// </summary>
         public void Play()
         {
-            throw new NotImplementedException();
+            _eye1.Roll();
+            _eye2.Roll();
+            if (Eye1 == 1 && Eye2 == 1)
+                Total = 0;
+            else
+                Total += Eye1 + Eye2;
         }
         #endregion
     }
