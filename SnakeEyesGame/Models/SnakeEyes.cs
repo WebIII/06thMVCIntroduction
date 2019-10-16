@@ -18,6 +18,7 @@ namespace SnakeEyesGame.Models
         public int Total { get; private set; }
         public int Eye1 => _eye1.Pips;
         public int Eye2 => _eye2.Pips;
+        public bool HasSnakeEyes => Eye1 == 1 && Eye2 == 1;
         #endregion
 
         #region Constructor
@@ -37,10 +38,7 @@ namespace SnakeEyesGame.Models
         {
             _eye1.Roll();
             _eye2.Roll();
-            if (Eye1 == 1 && Eye2 == 1)
-                Total = 0;
-            else
-                Total += Eye1 + Eye2;
+            Total = HasSnakeEyes ? 0 : Total + Eye1 + Eye2;
         }
         #endregion
     }
