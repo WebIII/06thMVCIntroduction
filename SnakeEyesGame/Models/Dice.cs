@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace SnakeEyesGame.Models
 {
-
+    [JsonObject(MemberSerialization.OptIn)]
     public class Dice
     {
         #region Fields
@@ -10,6 +11,7 @@ namespace SnakeEyesGame.Models
         #endregion
 
         #region Properties
+        [JsonProperty]
         public int Pips { get; private set; } 
         #endregion
 

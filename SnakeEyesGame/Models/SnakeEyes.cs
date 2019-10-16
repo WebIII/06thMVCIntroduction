@@ -1,19 +1,22 @@
-﻿namespace SnakeEyesGame.Models
-{
+﻿using Newtonsoft.Json;
+using System;
 
+namespace SnakeEyesGame.Models
+{
+    [JsonObject(MemberSerialization.OptIn)]
     public class SnakeEyes
     {
         #region Fields
+        [JsonProperty]
         private readonly Dice _eye1;
+        [JsonProperty]
         private readonly Dice _eye2;
         #endregion
 
         #region Properties
-
+        [JsonProperty]
         public int Total { get; private set; }
-
         public int Eye1 => _eye1.Pips;
-
         public int Eye2 => _eye2.Pips;
         #endregion
 
